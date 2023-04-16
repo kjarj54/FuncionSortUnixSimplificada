@@ -45,8 +45,8 @@ void quicksort(char** array, int left, int right) {
 int main() {
   
   	char* lines[MAX_LINES];
-  	int n = 0;// Crear una variable para guardar el número de líneas leídas
-  	char line[MAX_LINE];// Crear una variable para guardar la línea actual leída del usuario
+  	int n = 0;// Crear una variable para guardar el nï¿½mero de lï¿½neas leï¿½das
+  	char line[MAX_LINE];// Crear una variable para guardar la lï¿½nea actual leï¿½da del usuario
 
   	while (cin.getline(line, MAX_LINE) && line[0] != '\0' && n < MAX_LINES) {
     	lines[n] = new char[strlen(line) + 1];
@@ -55,6 +55,8 @@ int main() {
   	}
 
   quicksort(lines, 0, n - 1);
+
+  cout<<endl<<"El orden de las lineas anteriores es:"<<endl;
 
   for (int i = 0; i < n; i++) {
     cout << lines[i] << endl;
